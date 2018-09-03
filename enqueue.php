@@ -16,15 +16,17 @@
 if (!is_admin()) {
     function add_asyncdefer_attribute($tag, $handle)
     {
-        // if the unique handle/name of the registered script has 'async' in it
+        /**
+         * Scripts you dont enqueue manually but wants a defer tag
+         */
+        $extra_defer_scripts = array("jquery", "contact-form-7");
+
         if (strpos($handle, 'async') !== false) {
-            // return the tag with the async attribute
             return str_replace('<script ', '<script async ', $tag);
-        } // if the unique handle/name of the registered script has 'defer' in it
-        else if (strpos($handle, 'defer') !== false || $handle == "jquery") {
-            // return the tag with the defer attribute
+        }
+        else if (strpos($handle, 'defer') !== false || in_array($handle, $extra_defer_scripts)) {
             return str_replace('<script ', '<script defer ', $tag);
-        } // otherwise skip
+        }
         else {
             return $tag;
         }
