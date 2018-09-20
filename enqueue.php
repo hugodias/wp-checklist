@@ -62,7 +62,7 @@ function enqueue_pipeline()
     /**
      * Theme scripts
      */
-    wp_enqueue_script($theme . '-scripts-defer', get_template_directory_uri() . '/js/theme.min.js', array(), $version, true);
+    wp_enqueue_script($theme . '-scripts-defer', get_template_directory_uri() . '/js/theme.min.js', array('jquery'), $version, true);
 
     /**
      * Remove embed script
