@@ -56,7 +56,7 @@ function enqueue_pipeline()
      * Enqueue jQuery from CDN
      */
     wp_deregister_script('jquery');
-    wp_register_script('jquery', ("http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"), false, '1.12.4');
+    wp_register_script('jquery', ("https://code.jquery.com/jquery-3.3.1.slim.min.js"), false, '3.3.1', true);
     wp_enqueue_script('jquery');
 
     /**
