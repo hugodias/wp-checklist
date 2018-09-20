@@ -7,7 +7,7 @@
 - [ ] Don't add scripts directly to the page header. Use `wp_enqueue_script` and `wp_enqueue_style` instead (See [wordpress docs](https://developer.wordpress.org/reference/functions/wp_enqueue_script/))
 - [ ] Remove Emoji script
 - [ ] Remove Embeded script
-- [ ] Use jQuery from CDN and on Footer (See [enqueue.php#59](./enqueue.php#L59))
+- [ ] Load jQuery from CDN (See [enqueue.php#59](./enqueue.php#L59))
 - [ ] Prevent blocking scripts using `defer` (See [enqueue.php#27](./enqueue.php#L17))
 - [ ] Use automation tools (such as gulp.js) to compress and minify scripts and stylesheets (See [gulpfile.js](./gulpfile.js), [gulpconfig.json](./gulpconfig.json) and [package.json](package.json))
 
